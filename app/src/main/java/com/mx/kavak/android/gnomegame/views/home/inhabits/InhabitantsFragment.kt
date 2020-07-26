@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,16 +21,16 @@ import com.mx.kavak.android.gnomegame.databinding.FragmentInhabitsBinding
 import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 import com.mx.kavak.android.gnomegame.extensions.toast
 import com.mx.kavak.android.gnomegame.utils.Constant
-import org.koin.androidx.scope.currentScope
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.mx.kavak.android.gnomegame.views.home.inhabits.InhabitantsViewModel.UiModel
 import com.mx.kavak.android.gnomegame.views.home.inhabits.adapter.InhabitsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class InhabitantsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener,
     FloatingSearchView.OnSearchListener {
 
     private lateinit var binding: FragmentInhabitsBinding
-    private val viewModel: InhabitantsViewModel by currentScope.viewModel(this)
+    private val viewModel: InhabitantsViewModel by viewModels()
     private lateinit var adapter: InhabitsAdapter
 
     override fun onCreateView(

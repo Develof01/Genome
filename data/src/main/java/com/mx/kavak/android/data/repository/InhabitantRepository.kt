@@ -6,8 +6,8 @@ import com.mx.kavak.android.domain.dto.response.InhabitantsResponse
 import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.domain.models.ResultWrapper
 
-class InhabitRepository(private val remoteDataSource: InhabitantRemoteDataSource,
-                        private val localDataSource: InhabitantLocalDataSource
+class InhabitantRepository(private val remoteDataSource: InhabitantRemoteDataSource,
+                           private val localDataSource: InhabitantLocalDataSource
 ) {
 
     suspend fun readInhabitants(): ResultWrapper<InhabitantsResponse?> =

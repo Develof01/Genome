@@ -6,20 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.FragmentNotificationBinding
-import org.koin.androidx.scope.currentScope
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.mx.kavak.android.gnomegame.views.home.notifications.NotificationViewModel.UiModel
 import com.mx.kavak.android.gnomegame.views.home.notifications.adapter.NotificationAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class NotificationFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var binding: FragmentNotificationBinding
-    private val viewModel: NotificationViewModel by currentScope.viewModel(this)
+    private val viewModel: NotificationViewModel by viewModels()
     private lateinit var adapter: NotificationAdapter
 
     override fun onCreateView(

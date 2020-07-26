@@ -1,5 +1,6 @@
 package com.mx.kavak.android.gnomegame.views.home.notifications
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mx.kavak.android.domain.models.Notification
@@ -7,7 +8,7 @@ import com.mx.kavak.android.gnomegame.utils.ScopedViewModel
 import com.mx.kavak.android.usecases.NotificationUseCase
 import kotlinx.coroutines.launch
 
-class NotificationViewModel(
+class NotificationViewModel @ViewModelInject constructor(
     private val notificationUseCase: NotificationUseCase
 ): ScopedViewModel() {
 

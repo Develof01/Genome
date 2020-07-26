@@ -1,6 +1,7 @@
 package com.mx.kavak.android.gnomegame.views.home.inhabits
 
-import android.content.Context
+
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -12,7 +13,6 @@ import com.mx.kavak.android.gnomegame.data.database.AppDatabase
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantDao
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantFriendsDao
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantProfessionDao
-import com.mx.kavak.android.gnomegame.utils.Constant
 import com.mx.kavak.android.gnomegame.utils.ScopedViewModel
 import com.mx.kavak.android.usecases.InhabitantsUseCase
 import kotlinx.coroutines.Dispatchers.IO
@@ -21,15 +21,14 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
-class InhabitantsViewModel(
-    context: Context,
+class InhabitantsViewModel @ViewModelInject constructor(
+    db: AppDatabase,
     private val inhabitantsUseCase: InhabitantsUseCase
 ) : ScopedViewModel() {
     private var currentName = ""
     private var inhabitantName: MutableLiveData<String>? = null
     private var isRefreshing = false
 
-    private var db: AppDatabase? = null
     private var inhabitantDao: InhabitantDao? = null
     private var inhabitantFriendsDao: InhabitantFriendsDao? = null
     private var inhabitantProfessionDao: InhabitantProfessionDao? = null
@@ -48,10 +47,9 @@ class InhabitantsViewModel(
 
 
     init {
-        db = AppDatabase.getInstance(context)
-        inhabitantDao = db!!.inhabitantDao()
-        inhabitantFriendsDao = db!!.inhabitantFriendsDao()
-        inhabitantProfessionDao = db!!.inhabitantProfessionDao()
+        inhabitantDao = db.inhabitantDao()
+        inhabitantFriendsDao = db.inhabitantFriendsDao()
+        inhabitantProfessionDao = db.inhabitantProfessionDao()
         inhabitantName = MutableLiveData()
         inhabitantName!!.value = ""
         initScope()
@@ -138,7 +136,7 @@ class InhabitantsViewModel(
                 }
             }
             is ResultWrapper.GenericError -> {
-                _model.value = UiModel.DisplayError(response.status!!, response.errorDesc!!)
+                _model.value = UiModel.DisplayError(response.errorDesc!!)
             }
             is ResultWrapper.NetworkError -> {
                 _model.value = UiModel.DisplayNetworkError(response.networkError)
@@ -166,7 +164,7 @@ class InhabitantsViewModel(
 
     sealed class UiModel {
         object DismissLoading : UiModel()
-        class DisplayError(val status: Int, val message: String) : UiModel()
+        class DisplayError(val message: String) : UiModel()
         class DisplayNetworkError(val message: String): UiModel()
         class NavigateToDetail(val inhabitant: Inhabitant) : UiModel()
     }

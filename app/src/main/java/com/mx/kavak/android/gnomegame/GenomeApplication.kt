@@ -5,14 +5,14 @@ import android.util.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.iid.InstanceIdResult
-import com.mx.kavak.android.gnomegame.di.initDI
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class GenomeApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
         initFirebaseToken()
-        initDI()
     }
 
     private fun initFirebaseToken() {

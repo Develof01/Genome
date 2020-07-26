@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
@@ -17,21 +18,24 @@ import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.FragmentInhabitantDetailBinding
 import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 import com.mx.kavak.android.gnomegame.extensions.loadImage
+import com.mx.kavak.android.gnomegame.views.home.inhabits.InhabitantsViewModel
 import com.mx.kavak.android.gnomegame.views.home.inhabits.adapter.FriendsAdapter
-import org.koin.androidx.scope.currentScope
-import org.koin.androidx.viewmodel.ext.android.viewModel
-import org.koin.core.parameter.parametersOf
 import com.mx.kavak.android.gnomegame.views.home.inhabits.detail.InhabitantDetailViewModel.UiModel
 import com.mx.kavak.android.gnomegame.views.home.inhabits.dialogs.ProfessionsDialog
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class InhabitantDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentInhabitantDetailBinding
     private val args: InhabitantDetailFragmentArgs by navArgs()
-    private lateinit var inhabitant: Inhabitant
-    private val viewModel: InhabitantDetailViewModel by currentScope.viewModel(this) {
-        parametersOf(inhabitant)
+
+    companion object {
+        lateinit var inhabitant: Inhabitant
     }
+
+    private val viewModel: InhabitantDetailViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

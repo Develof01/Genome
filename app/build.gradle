@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion 29
@@ -39,7 +40,6 @@ android {
         }
     }
 
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,8 +55,8 @@ android {
             outputFileName = outputName
         }
     }
-
 }
+
 
 dependencies {
 
@@ -97,8 +97,12 @@ dependencies {
     annotationProcessor roomLibs.roomCompiler
     kapt roomLibs.roomKapt
 
-    //KOIN DEPENDENCIES
-    implementation koinLibs.koin
+    //DAGGER HILT DEPENDENCIES
+    implementation 'com.google.dagger:hilt-android:2.28-alpha'
+    kapt 'com.google.dagger:hilt-android-compiler:2.28-alpha'
+
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha01'
 
     //NAVIGATION DEPENDENCIES
     implementation navigationLibs.navigation
@@ -128,4 +132,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+}
+
+kapt {
+    correctErrorTypes true
 }

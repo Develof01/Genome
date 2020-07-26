@@ -1,14 +1,16 @@
 package com.mx.kavak.android.gnomegame.views.home.inhabits.detail
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.gnomegame.utils.ScopedViewModel
 import com.mx.kavak.android.usecases.InhabitantsUseCase
 import kotlinx.coroutines.*
+import javax.inject.Named
 
-class InhabitantDetailViewModel(
-    private val inhabitant: Inhabitant,
+class InhabitantDetailViewModel @ViewModelInject constructor(
+    @Named("inhabitant") private val inhabitant: Inhabitant,
     private val inhabitantsUseCase: InhabitantsUseCase
 ) : ScopedViewModel() {
 

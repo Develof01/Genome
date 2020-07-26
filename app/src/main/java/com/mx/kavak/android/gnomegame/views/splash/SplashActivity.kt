@@ -4,20 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.ActivitySplashBinding
 import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 import com.mx.kavak.android.gnomegame.views.home.HomeActivity
-import org.koin.androidx.scope.currentScope
-import org.koin.androidx.viewmodel.ext.android.viewModel
-import com.mx.kavak.android.gnomegame.views.splash.SplashViewModel.UiModel
+import com.mx.kavak.android.gnomegame.views.splash.SplashViewModule.UiModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
-    private val viewModel: SplashViewModel by currentScope.viewModel(this)
+    private val viewModel: SplashViewModule by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

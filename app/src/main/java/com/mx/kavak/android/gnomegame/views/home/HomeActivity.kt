@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.navigation.Navigation
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.ActivityHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
