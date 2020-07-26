@@ -33,4 +33,3 @@ El nivel mímino de API es [`21`](https://android-arsenal.com/api?level=21#l21) 
 
 * Herramientas de análisis estático
     * Android Lint
-    * ktlin
