@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/inhabitsFragment">
+
+    <fragment
+        android:id="@+id/inhabitsFragment"
+        android:name="com.mx.kavak.android.gnomegame.views.home.inhabits.InhabitantsFragment"
+        android:label="fragment_inhabits"
+        tools:layout="@layout/fragment_inhabits">
+        <action
+            android:id="@+id/action_inhabitsFragment_to_inhabitantDetailFragment"
+            app:destination="@id/inhabitantDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/inhabitantDetailFragment"
+        android:name="com.mx.kavak.android.gnomegame.views.home.inhabits.detail.InhabitantDetailFragment"
+        android:label="fragment_inhabitant_detail"
+        tools:layout="@layout/fragment_inhabitant_detail">
+        <action
+            android:id="@+id/action_inhabitantDetailFragment_to_inhabitsFragment"
+            app:destination="@id/inhabitsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_graph"
+            app:popUpToInclusive="true"/>
+
+        <argument
+            android:name="inhabitant"
+            app:argType="com.mx.kavak.android.domain.models.Inhabitant" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mx.kavak.android.gnomegame.views.home.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.mx.kavak.android.gnomegame.views.home.notifications.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <action android:id="@+id/action_global_notificationFragment" app:destination="@id/notificationFragment" />
+    <action android:id="@+id/action_global_inhabitsFragment" app:destination="@id/inhabitsFragment" />
+    <action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
+</navigation>

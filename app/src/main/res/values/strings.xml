@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Gnomo</string>
+
+    <!-- INTRO ACTIVITY -->
+    <string name="intro_powered_by">Powered by Omar Flores</string>
+    <string name="enter_username">Enter your username</string>
+
+    <!-- INHABITANTS FRAGMENT -->
+    <string name="hint_search">Search Inhabitant</string>
+
+    <!-- GENERAL -->
+    <string name="welcome">Bienvendio</string>
+    <string name="start">Iniciar</string>
+    <string name="accept">Aceptar</string>
+
+    <!-- MENU -->
+    <string name="home_menu">Home</string>
+    <string name="home_menu_profile">Profile</string>
+    <string name="home_menu_notification">Notifications</string>
+
+    <!-- INHABITANT DETAIL -->
+    <string name="show_professions">Show Professions</string>
+    <string name="my_friends">My Friends</string>
+    <string name="my_professions">My Professions</string>
+
+    <!-- PROFILE FRAGMENT -->
+    <string name="profile_name">Omar Uriel Flores Bolaños</string>
+    <string name="profile_email">urielh3smcr@gmail.com</string>
+    <string name="profile_profession">Ing. Sistemas Computacionales</string>
+
+    <!-- ERROR -->
+    <string name="error_enter_user">Enter username</string>
+    <string name="ws_connection_fail">Ocurrió un error de comunicación, revisa tu conexión a internet e intenta de nuevo.</string>
+    <string name="ws_http_error">Se estan presentando intermitencias en el servicio, intenta nuevamente. O comunicate con atención a clientes</string>
+    <string name="inhabits_ws_general_error">Error al obtener lista de habitantes. Intenta más tarde</string>
+    <string name="notification_empty_title">Not found</string>
+    <string name="notification_empty_body">Your notifications will appear here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

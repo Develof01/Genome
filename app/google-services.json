@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871678188387",
+    "firebase_url": "https://genomegame-2c55c.firebaseio.com",
+    "project_id": "genomegame-2c55c",
+    "storage_bucket": "genomegame-2c55c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871678188387:android:cfc8e6641f42d3b5705156",
+        "android_client_info": {
+          "package_name": "com.mx.kavak.android.gnomegame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871678188387-hert97fkfuiuffgfmk82tbl01ldte4lg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbHlLX9h0qMnr-lND3WXS--Skog7mnp18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871678188387-hert97fkfuiuffgfmk82tbl01ldte4lg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    def appName = "GnomeGame"
+    def buildCustomType = ""
+
+    defaultConfig {
+        applicationId "com.mx.kavak.android.gnomegame"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "URL_BASE", "\"url_base_prod\"")
+            buildCustomType = "release"
+        }
+        debug {
+            buildCustomType = "debug"
+            buildConfigField("String", "URL_BASE", "\"url_base_prod\"")
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    applicationVariants.all { variant ->
+        def outputName = "${appName}_${buildCustomType}_${defaultConfig.versionName}.apk"
+        variant.outputs.all { output ->
+            outputFileName = outputName
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(":usecases")
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //ANDROID DEPENDENCIES
+    implementation androidLibs.appcompat
+    implementation androidLibs.constraintLayout
+    implementation androidLibs.kotlinx
+    implementation androidLibs.lifeCycle
+    implementation androidLibs.multidex
+
+    //GOOGLE DEPENDENCIES
+    implementation googleLibs.material
+    implementation googleLibs.firebaseAnalytics
+    implementation googleLibs.firebaseMessaging
+    implementation googleLibs.firebaseCrashlytics
+    implementation googleLibs.firebaseCore
+
+    //COROUTINES DEPENDENCIES
+    implementation coroutinesLibs.core
+    implementation coroutinesLibs.android
+
+    //RETROFIT DEPENDENCIES
+    implementation retrofitLibs.retrofitInterceptor
+    implementation retrofitLibs.retrofit
+    implementation retrofitLibs.gson
+    implementation retrofitLibs.retrofitCoroutineAdapter
+
+    //ROOM DEPENDENCIES
+    implementation roomLibs.room
+    implementation roomLibs.roomLegacy
+    annotationProcessor roomLibs.roomCompiler
+    kapt roomLibs.roomKapt
+
+    //KOIN DEPENDENCIES
+    implementation koinLibs.koin
+
+    //NAVIGATION DEPENDENCIES
+    implementation navigationLibs.navigation
+    implementation navigationLibs.navigationUI
+    implementation navigationLibs.navigationRuntimeKtx
+    implementation navigationLibs.navigationFragmentKtx
+    implementation navigationLibs.navigationUiKtx
+
+    //LOTTIE DEPENDENCIES
+    implementation lottieLibs.lottie
+    implementation lottieLibs.lottieDialog
+
+    //DESIGN DEPENDENCIES
+    implementation designLibs.glide
+    annotationProcessor designLibs.glideCompiler
+    implementation designLibs.circleImageView
+    implementation designLibs.viewPageIndicator
+
+    //KARUMI DEPENDENCIES
+    implementation karumiLibs.permissions
+
+    //UI DEPENDENCIES
+    implementation uiLibs.arimortySearchView
+    implementation uiLibs.xabarsSwipeDecorator
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
