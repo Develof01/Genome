@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.splash
+package com.mx.kavak.android.gnomegame.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.ActivitySplashBinding
 import com.mx.kavak.android.gnomegame.extensions.chageVisibility
-import com.mx.kavak.android.gnomegame.views.home.HomeActivity
+import com.mx.kavak.android.gnomegame.ui.home.HomeActivity
 import org.koin.androidx.scope.currentScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import com.mx.kavak.android.gnomegame.views.splash.SplashViewModel.UiModel
+import com.mx.kavak.android.gnomegame.ui.splash.SplashViewModel.UiModel
 
 class SplashActivity : AppCompatActivity() {
 

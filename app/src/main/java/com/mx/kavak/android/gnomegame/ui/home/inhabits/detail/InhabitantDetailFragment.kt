@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.detail
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.detail
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -15,14 +15,12 @@ import androidx.navigation.fragment.navArgs
 import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.FragmentInhabitantDetailBinding
-import com.mx.kavak.android.gnomegame.extensions.chageVisibility
-import com.mx.kavak.android.gnomegame.extensions.loadImage
-import com.mx.kavak.android.gnomegame.views.home.inhabits.adapter.FriendsAdapter
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.adapter.FriendsAdapter
 import org.koin.androidx.scope.currentScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
-import com.mx.kavak.android.gnomegame.views.home.inhabits.detail.InhabitantDetailViewModel.UiModel
-import com.mx.kavak.android.gnomegame.views.home.inhabits.dialogs.ProfessionsDialog
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.detail.InhabitantDetailViewModel.UiModel
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.dialogs.ProfessionsDialog
 
 class InhabitantDetailFragment : Fragment() {
 

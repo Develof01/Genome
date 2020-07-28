@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.profile.adapter
+package com.mx.kavak.android.gnomegame.ui.home.profile.adapter
 
 import android.content.Context
 import android.view.View

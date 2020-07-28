@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.detail
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.detail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

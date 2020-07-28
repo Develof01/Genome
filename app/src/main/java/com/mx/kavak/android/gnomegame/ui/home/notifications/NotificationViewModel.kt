@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.notifications
+package com.mx.kavak.android.gnomegame.ui.home.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

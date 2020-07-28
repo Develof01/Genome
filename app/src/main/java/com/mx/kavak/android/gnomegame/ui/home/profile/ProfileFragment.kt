@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.profile
+package com.mx.kavak.android.gnomegame.ui.home.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.mx.kavak.android.domain.models.ProfileData
 import com.mx.kavak.android.gnomegame.databinding.FragmentProfileBinding
 import com.mx.kavak.android.gnomegame.utils.SimpleDividerItemDecoration
-import com.mx.kavak.android.gnomegame.views.home.profile.adapter.ProfileDataAdapter
+import com.mx.kavak.android.gnomegame.ui.home.profile.adapter.ProfileDataAdapter
 
 
 class ProfileFragment : Fragment() {

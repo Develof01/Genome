@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.notifications.adapter
+package com.mx.kavak.android.gnomegame.ui.home.notifications.adapter
 
 import android.view.View
 import android.view.ViewGroup

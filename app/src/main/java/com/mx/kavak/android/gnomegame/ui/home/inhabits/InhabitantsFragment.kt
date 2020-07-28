@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits
+package com.mx.kavak.android.gnomegame.ui.home.inhabits
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -17,13 +17,12 @@ import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.data.toDomainInhabitant
 import com.mx.kavak.android.gnomegame.databinding.FragmentInhabitsBinding
-import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 import com.mx.kavak.android.gnomegame.extensions.toast
 import com.mx.kavak.android.gnomegame.utils.Constant
 import org.koin.androidx.scope.currentScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import com.mx.kavak.android.gnomegame.views.home.inhabits.InhabitantsViewModel.UiModel
-import com.mx.kavak.android.gnomegame.views.home.inhabits.adapter.InhabitsAdapter
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.InhabitantsViewModel.UiModel
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.adapter.InhabitsAdapter
 
 class InhabitantsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener,
     FloatingSearchView.OnSearchListener {

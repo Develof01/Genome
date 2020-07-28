@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inhabitsFragment"
-        android:name="com.mx.kavak.android.gnomegame.views.home.inhabits.InhabitantsFragment"
+        android:name="com.mx.kavak.android.gnomegame.ui.home.inhabits.InhabitantsFragment"
         android:label="fragment_inhabits"
         tools:layout="@layout/fragment_inhabits">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/inhabitantDetailFragment"
-        android:name="com.mx.kavak.android.gnomegame.views.home.inhabits.detail.InhabitantDetailFragment"
+        android:name="com.mx.kavak.android.gnomegame.ui.home.inhabits.detail.InhabitantDetailFragment"
         android:label="fragment_inhabitant_detail"
         tools:layout="@layout/fragment_inhabitant_detail">
         <action
@@ -37,13 +37,13 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.mx.kavak.android.gnomegame.views.home.profile.ProfileFragment"
+        android:name="com.mx.kavak.android.gnomegame.ui.home.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/notificationFragment"
-        android:name="com.mx.kavak.android.gnomegame.views.home.notifications.NotificationFragment"
+        android:name="com.mx.kavak.android.gnomegame.ui.home.notifications.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <action android:id="@+id/action_global_notificationFragment" app:destination="@id/notificationFragment" />

@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.detail
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mx.kavak.android.domain.models.Inhabitant
-import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.FragmentFriendsBinding
-import com.mx.kavak.android.gnomegame.extensions.chageVisibility
-import com.mx.kavak.android.gnomegame.extensions.loadImage
 
 
 class FriendsFragment(

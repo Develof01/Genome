@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.dialogs
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.dialogs
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -6,7 +6,7 @@ import android.app.Dialog
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.mx.kavak.android.gnomegame.R
-import com.mx.kavak.android.gnomegame.views.home.inhabits.adapter.ProfessionsAdapter
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.adapter.ProfessionsAdapter
 
 class ProfessionsDialog(
     activity: Activity,

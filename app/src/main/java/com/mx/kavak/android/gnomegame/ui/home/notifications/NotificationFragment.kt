@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.notifications
+package com.mx.kavak.android.gnomegame.ui.home.notifications
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,8 +12,8 @@ import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.databinding.FragmentNotificationBinding
 import org.koin.androidx.scope.currentScope
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import com.mx.kavak.android.gnomegame.views.home.notifications.NotificationViewModel.UiModel
-import com.mx.kavak.android.gnomegame.views.home.notifications.adapter.NotificationAdapter
+import com.mx.kavak.android.gnomegame.ui.home.notifications.NotificationViewModel.UiModel
+import com.mx.kavak.android.gnomegame.ui.home.notifications.adapter.NotificationAdapter
 
 
 class NotificationFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {

@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.adapter
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.adapter
 
 import android.view.View
 import android.view.ViewGroup

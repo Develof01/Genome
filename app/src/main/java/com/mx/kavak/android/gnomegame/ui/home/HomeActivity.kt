@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home
+package com.mx.kavak.android.gnomegame.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.splash
+package com.mx.kavak.android.gnomegame.ui.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

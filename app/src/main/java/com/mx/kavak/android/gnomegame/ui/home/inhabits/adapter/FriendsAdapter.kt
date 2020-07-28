@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits.adapter
+package com.mx.kavak.android.gnomegame.ui.home.inhabits.adapter
 
 import android.annotation.SuppressLint
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.mx.kavak.android.domain.models.Inhabitant
-import com.mx.kavak.android.gnomegame.views.home.inhabits.detail.FriendsFragment
+import com.mx.kavak.android.gnomegame.ui.home.inhabits.detail.FriendsFragment
 
 @SuppressLint("WrongConstant")
 class FriendsAdapter(fm: FragmentManager,

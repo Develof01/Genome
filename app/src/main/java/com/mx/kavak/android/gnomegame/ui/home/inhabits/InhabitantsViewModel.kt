@@ -1,4 +1,4 @@
-package com.mx.kavak.android.gnomegame.views.home.inhabits
+package com.mx.kavak.android.gnomegame.ui.home.inhabits
 
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -12,7 +12,6 @@ import com.mx.kavak.android.gnomegame.data.database.AppDatabase
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantDao
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantFriendsDao
 import com.mx.kavak.android.gnomegame.data.database.dao.InhabitantProfessionDao
-import com.mx.kavak.android.gnomegame.utils.Constant
 import com.mx.kavak.android.gnomegame.utils.ScopedViewModel
 import com.mx.kavak.android.usecases.InhabitantsUseCase
 import kotlinx.coroutines.Dispatchers.IO
