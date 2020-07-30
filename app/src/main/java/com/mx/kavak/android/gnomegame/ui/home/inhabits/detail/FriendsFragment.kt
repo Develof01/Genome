@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.gnomegame.databinding.FragmentFriendsBinding
+import com.mx.kavak.android.gnomegame.extensions.loadImage
+import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 
 
 class FriendsFragment(
@@ -30,6 +32,7 @@ class FriendsFragment(
             binding.ivFriendSecond.loadImage(secondInhabitant.photo)
             binding.tvFriendName.text = secondInhabitant.name
         } else {
+
             binding.cvSecondService.chageVisibility(View.GONE)
         }
 

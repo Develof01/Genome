@@ -17,6 +17,7 @@ import com.mx.kavak.android.domain.models.Inhabitant
 import com.mx.kavak.android.gnomegame.R
 import com.mx.kavak.android.gnomegame.data.toDomainInhabitant
 import com.mx.kavak.android.gnomegame.databinding.FragmentInhabitsBinding
+import com.mx.kavak.android.gnomegame.extensions.chageVisibility
 import com.mx.kavak.android.gnomegame.extensions.toast
 import com.mx.kavak.android.gnomegame.utils.Constant
 import org.koin.androidx.scope.currentScope

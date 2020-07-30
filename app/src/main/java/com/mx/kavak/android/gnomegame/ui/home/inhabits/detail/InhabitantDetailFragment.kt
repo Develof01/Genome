@@ -21,6 +21,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import com.mx.kavak.android.gnomegame.ui.home.inhabits.detail.InhabitantDetailViewModel.UiModel
 import com.mx.kavak.android.gnomegame.ui.home.inhabits.dialogs.ProfessionsDialog
+import com.mx.kavak.android.gnomegame.extensions.chageVisibility
+import com.mx.kavak.android.gnomegame.extensions.loadImage
 
 class InhabitantDetailFragment : Fragment() {
 
